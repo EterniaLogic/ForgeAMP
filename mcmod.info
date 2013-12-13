@@ -1,0 +1,18 @@
+[
+{
+  "modid" : "amp",
+  "name" : "Advanced Minecraft Performance",
+  "version" : "0.1a",
+  "credits" : "MCP and forge",
+  "authors": [
+    "EterniaLogic (IGN DreadEnd)"
+  ],
+  "description": "Helps boost minecraft performance for multi-core clients and servers",
+  "url" : "",
+  "updateUrl" : "",
+  "logoFile" : "",
+  "parent" : "",
+  "screenshots": [
+  ]
+}
+]
