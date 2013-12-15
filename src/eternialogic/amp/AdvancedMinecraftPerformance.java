@@ -1,5 +1,7 @@
 package eternialogic.amp;
 
+import listener.AmpListener;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -29,7 +31,6 @@ public class AdvancedMinecraftPerformance {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
-		System.out.println(ConfigHandler.SOME_TEXT_VALUE);
 		proxy.initSounds();
 		proxy.initRenderers();
 		
@@ -39,7 +40,7 @@ public class AdvancedMinecraftPerformance {
 	
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
-	
+		MinecraftForge.EVENT_BUS.register(new AmpListener());
 	}
 	
 	@EventHandler
